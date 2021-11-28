@@ -1,0 +1,80 @@
+<style>
+.alley {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+.alley img {
+  width: 100%;
+}
+</style>
+
+<div class="alley">
+<img id="lane1" src="default.jpg">
+<img id="lane2" src="default.jpg">
+<img id="lane3" src="default.jpg">
+<img id="lane4" src="default.jpg">
+<img id="lane5" src="default.jpg">
+<img id="lane6" src="default.jpg">
+<img id="lane7" src="default.jpg">
+<img id="lane8" src="default.jpg">
+<img id="lane9" src="default.jpg">
+<img id="lane10" src="default.jpg">
+<img id="lane11" src="default.jpg">
+<img id="lane12" src="default.jpg">
+<img id="lane13" src="default.jpg">
+<img id="lane14" src="default.jpg">
+<img id="lane15" src="default.jpg">
+<img id="lane16" src="default.jpg">
+<img id="lane17" src="default.jpg">
+<img id="lane18" src="default.jpg">
+<img id="lane19" src="default.jpg">
+<img id="lane20" src="default.jpg">
+<img id="lane21" src="default.jpg">
+<img id="lane22" src="default.jpg">
+<img id="lane23" src="default.jpg">
+<img id="lane24" src="default.jpg">
+<img id="lane25" src="default.jpg">
+<img id="lane26" src="default.jpg">
+<img id="lane27" src="default.jpg">
+<img id="lane28" src="default.jpg">
+<img id="lane29" src="default.jpg">
+<img id="lane30" src="default.jpg">
+<img id="lane31" src="default.jpg">
+<img id="lane32" src="default.jpg">
+<img id="lane33" src="default.jpg">
+<img id="lane34" src="default.jpg">
+<img id="lane35" src="default.jpg">
+<img id="lane36" src="default.jpg">
+<img id="lane37" src="default.jpg">
+<img id="lane38" src="default.jpg">
+<img id="lane39" src="default.jpg">
+<img id="lane40" src="default.jpg">
+<img id="lane41" src="default.jpg">
+<img id="lane42" src="default.jpg">
+<img id="lane43" src="default.jpg">
+<img id="lane44" src="default.jpg">
+<img id="lane45" src="default.jpg">
+<img id="lane46" src="default.jpg">
+<img id="lane47" src="default.jpg">
+<img id="lane48" src="default.jpg">
+</div>
+
+<script>
+function update() {
+  var lanes = new Array("","42659","691906","637319","244532","296251","817063","159869","477342","546988","803259","691906","39548","10795","465556","92967","989266","691906","873862","39548","296251","152386","152386","671158","691906","659772","691906","637319","691906","691906","691906","182457","182457","182457","182457","118235","118235","293186","293186","759072","759072","182457","182457","182457","182457","237256","182457","986028","986028","");
+  for (var lane = 1; lane <= 48; lane ++) {
+    document.getElementById("lane"+lane).src="https://onlinescoring.meriq.com/151/"+lanes[lane]+"/"+lane+"_small.jpg?nocache="+Date.now();
+  }
+}
+update();
+
+var speed = new URLSearchParams(window.location.search).get('speed');
+if (speed == null) {
+  speed = 7000;
+}
+
+setInterval(function() {
+    update()
+}, speed);
+</script>
